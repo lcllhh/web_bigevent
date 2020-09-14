@@ -29,6 +29,7 @@ $(function() {
                 return layer.msg(res.message);
             }
             layer.msg('注册成功，请登录');
+            $('#form_reg')[0].reset();
             $('#link-login').click();
         })
     })
@@ -39,6 +40,7 @@ $(function() {
                 return layer.msg('登录失败');
             }
             layer.msg('登录成功');
+            $('#form_login')[0].reset();
             localStorage.setItem('token', reg.token);
             location.href = 'index.html'
         })
